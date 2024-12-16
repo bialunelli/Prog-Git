@@ -1,0 +1,16 @@
+<script>
+    //ENTRADA
+
+    const produto = Number(prompt(`Qual é o valor do produto?`));
+
+    //PROCESSAMENTO
+
+    const imposto = 60 / 100 * produto;
+    const icms = 20 / 100 * produto;
+    const total = imposto + icms + produto;
+
+    //SAÍDA
+
+    alert(`R$${total} será o valor final do produto`);
+
+</script>

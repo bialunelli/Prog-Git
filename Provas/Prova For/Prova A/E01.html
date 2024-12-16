@@ -1,0 +1,29 @@
+<script>
+    //Problema: Nomes com a letra A
+    /*
+    Considere a seguinte lista de nomes:
+    let nomes = ['Ana', 'Bia', 'Carla', 'Amanda', 'Alice', 'Beatriz', 'Aline', 'Clara'];
+    Verifique quais nomes da lista começam com a letra 'A' e retorne a lista com os nomes encontrados. Os demais devem ser desconsiderados.
+    
+    UTILIZE FOR...OF!
+    */
+
+    //ENTRADA
+
+    let nomes = ['Ana', 'Bia', 'Carla', 'Amanda', 'Alice', 'Beatriz', 'Aline', 'Clara'];
+    let nomesA = [];
+    let inicial = ["A"];
+
+    //PROCESSAMENTO
+
+    for(let nome of nomes){
+        let primeiraLetra = nome.charAt(0).toUpperCase();
+        if(inicial.includes(primeiraLetra)) {
+            nomesA.push(nome);
+        }
+    }
+
+    //SAÍDA
+    
+    document.write(`Os nomes que começam com "A" são: ${nomesA.join(`, `)}`) ;
+</script>

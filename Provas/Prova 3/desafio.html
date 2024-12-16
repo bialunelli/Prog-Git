@@ -1,0 +1,22 @@
+<script>
+
+    //ENTRADA
+
+    const fixo = Number(prompt(`Qual o salário fixo dado pela empresa?`));
+    const vendidos = Number(prompt(`Qual foi a quantidade de carros vendidos?`));
+    const valorTotal = Number(prompt(`Qual foi o valor total de carros vendidos pelo funcionário?`));
+
+
+    //PROCESSAMENTO
+
+    const comissaoCarro = vendidos * 450;
+    const porcentagemCarros = valorTotal * 7 / 100;
+    const soma = fixo + comissaoCarro + porcentagemCarros;
+    const imposto = soma * 28 / 100;
+    const total = soma - imposto;
+
+    //SAÍDA
+
+    alert(`Seu salário final é de R$${total} (já descontado de imposto de renda)`);
+    
+</script>

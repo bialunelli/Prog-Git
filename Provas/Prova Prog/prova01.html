@@ -1,0 +1,60 @@
+<script>
+/* PROVA IF - ELSE / SWITCH CASE */
+
+
+//ENTRADA
+    const nome = prompt(`Informe o nome completo do empregado.`);
+    const cpf = prompt(`Informe o seu número de CPF.`);
+    const salarioBruto = Number(prompt(`Informe o seu salário bruto.`).replace(",","."));
+    const codigo = prompt(`Informe o código de seu cargo (abc123, cda236, xyz999, 9a8b7c, log456 ou mnd56).`).toLowerCase();
+
+
+//PROCESSAMENTO
+    let descontoContribuicao;
+    let descontoPrevidencia;
+    let mensagem;
+
+    if (codigo === "abc123") {
+        descontoContribuicao =  salarioBruto * 0.095;
+    }
+    else if (codigo === "cda236") {
+        descontoContribuicao = salarioBruto * 0.085;
+    }
+    else if (codigo === "xyz999") {
+        descontoContribuicao = salarioBruto * 0.059;
+    }
+    else if (codigo === "9a8b7c") {
+        descontoContribuicao = salarioBruto * 0.045;
+    }
+    else if (codigo === "log456") {
+        descontoContribuicao = salarioBruto * 0.03;
+    }
+    else if (codigo === "mnd56") {
+        descontoContribuicao = salarioBruto * 0.015;
+    }
+    else {
+        alert(`Insira um código válido.`);
+    }
+
+    //
+
+    if (salarioBruto > 1412) {
+        descontoPrevidencia = salarioBruto * 0.125;
+        mensagem = "O valor do desconto para o imposto de previdência social é de R$ " + descontoPrevidencia;
+    }
+    else {
+        descontoPrevidencia = 0;
+        mensagem = "O empregado não pagará o imposto de previdência social";
+    }
+
+    //
+
+    const salarioFinal = salarioBruto - (Number(descontoContribuicao) + Number(descontoPrevidencia));
+    
+//SAÍDA
+
+    document.write(`O nome completo do empregado é ${nome}, portador(a) do CPF ${cpf}. <br>
+    O valor de sua contribuição sindical é de R$ ${descontoContribuicao.toFixed(2)}. <br>
+    ${mensagem}.<br>
+    O salário final do empregado após os descontos é de R$ ${salarioFinal.toFixed(2)}.`);
+    </script>

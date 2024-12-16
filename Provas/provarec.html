@@ -1,0 +1,58 @@
+<script>
+    //ENTRADA N1
+    
+    alert(`Use "S" - para sim, e "N" - para não.`);
+    const doar = prompt(`Você gostaria de doar algo?`).toUpperCase;
+    alert(`Digite 1 - brinquedos, 2 - roupas, 3 - higiene pessoal, 12 - brinquedos de roupas, 13 - brinquedos e higiene pessoal, 23 - roupas e itens de higiene pessoal, 123 - brinquedos, roupas e itens de higiene pessoal`);
+    const oq = Number(prompt(`O que você gostaria de doar?`));
+    const nome = prompt(`Qual o seu nome?`);
+    //PROCESSAMENTO N1
+
+    if (oq == 1) {
+        alert(`${nome} muito obrigada por doar brinquedos`);
+    } else if (oq == 2) {
+        alert(`${nome} muito obrigada por doar roupas`);
+    } else if (oq == 3) {
+        alert(`${nome} muito obrigada por doar itens de higiene pessoal`);
+    } else if (oq == 12) {
+        alert(`${nome} muito obrigada por doar brinquedos de roupas`);
+    } else if (oq == 13) {
+        alert(`${nome} muito obrigada por doar brinquedos e itens de higiene pessoal`);
+    } else if (oq == 23) {
+        alert(`${nome} muito obrigada por doar roupas e itens de higiene pessoal`);
+    } else if (oq == 123) {
+        alert(`${nome} muito obrigada por doar brinquedos, roupas e itens de higiene pessoal`);
+    } else if (doar == "N"){
+        alert(`${nome} muito obrigada pela participação!`);
+    } else {
+        alert(`Código Inválido`);
+    }
+    
+    //ENTRADA N2
+
+    const nome2 = prompt(`Qual o seu nome?`);
+    const salario = Number(prompt(`Qual o seu salário?`));
+
+    //PROCESSAMENTO N2
+
+    if (salario <= 2529.20) {
+        alert(`Nada será descontado`);
+    } else if (salario <= 2826.65) {
+        const desc = salario * 0.075;
+        const total = salario - desc;
+        alert(`${nome2} seu salário bruto é ${salario}, seu salário líquido será R$${total}`);
+    } else if (salario <= 3751.05) {
+        const desc1 = salario * 0.15;
+        const total1 = salario - desc1;
+        alert(`${nome2} seu salário bruto é ${salario}, seu salário líquido será R$${total1}`);
+    } else if (salario <= 4664.68) {
+        const desc2 = salario * 0.225;
+        const total2 = salario - desc2;
+        alert(`${nome2} seu salário bruto é ${salario}, seu salário líquido será R$${total2}`);
+    } else if (salario > 4664.68) {
+        const desc3 = salario * 0.275;
+        const total3 = salario - desc3;
+        alert(`${nome2} seu salário bruto é ${salario}, seu salário líquido será R$${total3}`)
+    }
+    
+</script>

@@ -1,0 +1,19 @@
+<meta charset="UTF-8">
+<script>
+    /*
+    Problema: Divisão de herança
+    Peça para o usuário informar a quantidade de cabeças de gado que um fazendeiro possui e também informar quantos herdeiros possui. Antes de falecer, o fazendeiro doará 15% dessas cabeças de gado. Calcule e apresente quantas cabeças de gado restarão para cada herdeiro.
+    */
+
+    //ENTRADA
+    const cabecasdeGado = Number(prompt(`Quantas cabeças de gado você possui?`));
+    const herdeiros = Number(prompt(`QUantos herdeiros você possui?`));
+    
+    //PROCESSAMENTO
+    const conta = 15 / 100 * cabecasdeGado;
+    const total = conta / herdeiros;
+    
+    //SAÍDA
+    alert(`Restarão ${total} cabeças de gado para cada herdeiro.`);
+
+</script>

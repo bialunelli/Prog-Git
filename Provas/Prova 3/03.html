@@ -1,0 +1,20 @@
+<script>
+
+    //ENTRADA
+
+    /* Prof eu espero que esteja certo, não consegui compreender perfeitamente o enunciado mas acho que é assim :) */
+
+    const tempo = Number(prompt(`Por quantos minutos você usou o computador?`));
+    const valor = Number(prompt(`Qual o valor cobrado a cada 10 minutos?`));
+
+
+    //PROCESSAMENTO
+
+    const minutos = Math.ceil(tempo / 10) * 10;
+    const preco = minutos;     
+
+    //SAÍDA
+
+    alert(`Você deverá pagar ${preco} pois você utilizou o computador por ${minutos} minutos`);
+    
+</script>

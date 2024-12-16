@@ -1,0 +1,22 @@
+<script>
+    //ENTRADA
+
+    const pedreiros = Number(prompt(`Quantos pedreiros trabalharão na sua obra?`));
+    const diaria = Number(prompt(`Qual o valor da diária?`));
+    const dias = Number(prompt(`Quantos dias eles trabalharão na sua obra?`));
+    const pintores = Number(prompt(`Quantos pintores trabalharão na sua obra?`));
+    const day = Number(prompt(`Qual o valor da diária?`));
+    const quantidade = Number(prompt(`Quantos dias eles trabalharão na sua obra?`));
+
+    //PROCESSAMENTO
+
+    const primeiros = diaria * dias * pedreiros;
+    const segundos = day * quantidade * pintores;
+    const total = primeiros + segundos;
+    const todos = dias + quantidade;
+
+    //SAÍDA
+
+    alert(`R$${total} é o valor gasto na sua obra, já ${todos} é a quantidade de dias que eles trabalharão juntos`);
+
+</script>

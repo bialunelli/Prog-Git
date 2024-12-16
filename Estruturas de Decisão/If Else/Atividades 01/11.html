@@ -1,0 +1,51 @@
+<script>
+    /*
+    PROBLEMA: DESCONTO COMBUSTÍVEL
+    Um posto está vendendo combustíveis com a seguinte tabela de descontos:
+    Álcool:
+    - até 20 litros, desconto de 3% por litro
+    - acima de 20 litros, desconto de 5% por litro
+
+    Gasolina:
+    - até 20 litros, desconto de 4% por litro
+    - acima de 20 litros, desconto de 6% por litro
+    
+    Escreva um algoritmo que leia o número de litros vendidos, o tipo de combustível (codificado da seguinte forma: A-álcool, G-gasolina), calcule e imprima o valor a ser pago pelo cliente sabendo-se que o preço do litro da gasolina é R$ 6,50 o preço do litro do álcool é R$ 6,10.
+    */
+
+    //ENTRADA
+
+    const litros = Number(prompt(`Quantos litros foram vendidos?`));
+    const combustível = prompt(`Qual foi o tipo do combustível? (A - álcool e G - gasolina)`).toUpperCase().trim();
+
+    //PROCESSAMENTO
+
+    if (combustível == "A") {
+        if (litros < 20){
+            const mult2 = 6.10 * litros;
+            const porcentagem1A = 3 / 100 * mult2;
+            const totalA1 = (mult2 - porcentagem1A).toFixed(2);
+            alert(`Você pagará R$${totalA1}`);
+        } else {
+            const mult2 = 6.10 * litros;
+            const porcentagem2A = 5 / 100 * mult2;
+            const totalA2 = (mult2 - porcentagem2A).toFixed(2);
+            alert(`Você pagará R$${totalA2}`);
+        }
+    } else if (combustível == "G") {
+        if (litros < 20) {
+            const mult1 = 6.50 * litros;
+            const porcentagem1G = 4 / 100 * mult1;
+            const totalG1 = (mult1 - porcentagem1G).toFixed(2);
+            alert(`Você pagará R$${totalG1}`);
+        } else {
+            const mult1 = 6.50 * litros;
+            const porcentagem2G = 6 / 100 * mult1;
+            const totalG2 = (mult1 - porcentagem2G).toFixed(2);
+            alert (`Você pagará R$${totalG2}`)
+        }
+    }
+
+    //SAÍDA
+  
+</script>

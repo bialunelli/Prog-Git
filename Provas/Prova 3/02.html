@@ -1,0 +1,18 @@
+<script>
+
+    //ENTRADA
+
+    const totalAlunos = Number(prompt(`Qual foi o total de alunos participantes?`));
+    const totalChapa1 = Number(prompt(`Quantos alunos querem votar na chapa 1?`));
+
+    //PROCESSAMENTO
+
+    const primeiraChapa = totalChapa1 / totalAlunos * 100;
+    const alunosRestantes = totalAlunos - totalChapa1;
+    const segundaChapa = alunosRestantes / totalAlunos * 100;
+
+    //SAÍDA
+
+    alert(`${primeiraChapa}% dos alunos votará na chapa 1, enquanto ${segundaChapa}% dos alunos votará na segunda chapa`);
+    
+</script>

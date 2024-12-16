@@ -1,0 +1,36 @@
+<script>
+    //Problema: Contar vogais
+    /*
+    Considere o seguinte texto:
+    let texto = 'O rato roeu a roupa do rei de Roma';
+    Conte quantas vogais existem no texto e retorne a quantidade encontrada.
+    
+    UTILIZE FOR...OF!
+    */
+
+    //ENTRADA
+
+    let texto = ('O rato roeu a roupa do rei de Roma').toUpperCase();
+    let textinho = [];
+    let vogais = ["A", "E", "I", "O", "U"];
+
+    //PROCESSAMENTO
+
+    for(letra of texto) {
+        if(letra == "A") {
+            textinho.push(letra);
+        } else if (letra == "E") {
+            textinho.push(letra);
+        } else if (letra == "I") {
+            textinho.push(letra);
+        } else if (letra == "O") {
+            textinho.push(letra);
+        } else if (letra == "U") {
+            textinho.push(letra);
+        }
+    }
+
+    //SAÍDA
+    
+    document.write(`A frase "O rato roeu a roupa do rei de Roma" contém: ${textinho.length} vogais`);
+</script>

@@ -1,0 +1,39 @@
+<script>
+    /*Peça para o usuário informar a quantidade de eleitores que possuem no município.
+    Peça também para o usuário informar quantos votos o Candidato 1 recebeu.
+    Peça para o usuário informar quantos votos o Candidato 2 recebeu.
+    Além dos candidatos, peça para informar qual a quantidade de votos brancos e qual a quantidade de votos nulos.
+    Apresente para o usuário:
+    - A porcentagem de votos que o Candidato 1 recebeu
+    - A porcentagem de votos que o Candidato 2 recebeu
+    - A porcentagem de votos brancos
+    - A porcentagem de votos nulos
+    - A porcentagem de pessoas que não foram votar*/
+    
+    //ENTRADA
+
+    const quantEleitores = prompt(`Informe a quantidade de eleitores no município:`);
+    const votosCandUm = prompt(`Informe quantos votos o candidato 1 recebeu:`);
+    const votosCandDois = prompt(`Informe quantos votos o candidato 2 recebeu:`);
+    const votosBrancos = prompt(`Informe a quantidade de votos brancos:`);
+    const votosNulos = prompt(`Informe a quantidade de votos nulos:`);
+    
+    //PROCESSAMENTO
+
+    let porcCandUm = votosCandUm / quantEleitores * 100;
+    let porcCandDois = votosCandDois / quantEleitores * 100;
+    let porcBrancos = votosBrancos / quantEleitores * 100;
+    let porcNulos = votosNulos / quantEleitores * 100;
+    let naoVotaram = quantEleitores - votosCandUm - votosCandDois - votosBrancos - votosNulos;
+    let porcNaoVotaram = naoVotaram / quantEleitores * 100;
+
+    //SAÍDA
+
+    document.write(`O candidato 1 recebeu ${porcCandUm.toFixed(2).replace(".",",")}% dos votos.`);
+    document.write(` O candidato 2 recebeu ${porcCandDois.toFixed(2).replace(".",",")}% dos votos.`);
+    document.write(` A quantidade de votos brancos foi de ${porcBrancos.toFixed(2).replace(".",",")}% dos votos.`);
+    document.write(` A quantidade de votos nulos foi de ${porcNulos.toFixed(2).replace(".",",")}% dos votos.`);
+    document.write(` A quantidade de pessoas que não foram votar foi de ${porcNaoVotaram.toFixed(2).replace(".",",")}% dos votos.`);
+    
+    </script>
+

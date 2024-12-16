@@ -1,0 +1,19 @@
+<meta charset="UTF-8">
+<script>
+    /*
+    Problema: Realizar pesquisa
+    Você foi encarregado de realizar uma pesquisa sobre acesso a computadores. A sua pesquisa deverá apresentar o percentual de alunos da sua escola que possuem acesso computadores. Para isso, elabore um algoritmo que leia o número total de alunos da sua escola e o número de alunos que possuem acesso a computadores, por fim, com base nestes dados, escreva o percentual de alunos com acesso a computadores.
+    Por exemplo, em uma escola com 500 alunos, apenas 200 alunos possuem acesso à Internet, o que equivale a 40% destes 500 alunos.
+    */
+
+    //Entrada
+    const totaldeAlunos = Number(prompt(`Quantos alunos tem na sua escola?`));
+    const totalComputadores = Number(prompt(`Quantos alunos tem acesso a computadores na sua escola?`));
+
+    //Processamento
+    const multiplicacao = totalComputadores * 100;
+    const resultado = multiplicacao / totaldeAlunos;
+
+    //Saída
+    alert(`${resultado}% dos alunos tem acesso a computadores na sua escola`);
+</script>

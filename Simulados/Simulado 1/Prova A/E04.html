@@ -1,0 +1,19 @@
+<meta charset="UTF-8">
+<script>
+    /*
+    Problema: Custo do Computador
+    Considere que o preço final de um computador é a soma do custo de fábrica, o imposto de importação (30%) e porcentagem da loja (45%), ambos aplicados sobre o custo de fábrica.
+    Faça um script que leia o custo de fábrica do computador e calcule os custos adicionais, apresentando o custo final do computador ao comprador.
+    */
+
+    //Entrada
+    const fabrica = Number(prompt(`Qual o custo de fábrica do computador?`));
+
+    //Processamento
+    const porcentagemImposto = fabrica * 0.3;
+    const porcentagemLoja = fabrica * 0.45;
+    const soma = porcentagemImposto + porcentagemLoja + fabrica;
+
+    //Saída
+    alert(`O custo final será de R$${soma}`);
+</script>

@@ -1,0 +1,31 @@
+<meta charset="UTF-8">
+<script>
+    
+    /*
+    PROBLEMA: VALIDAR SENHA
+    Faça um programa que receba uma senha formada de quatro números inteiros, verifique se a senha está correta e, caso não esteja, solicite novamente a senha. Se a senha entrada for a correta, deverá ser apresentada a mensagem “Senha Correta”, caso contrário, “Senha Incorreta”.
+    */
+
+    //ENTRADA
+
+    let senhaC = Number(prompt(`Digite uma senha com 4 números inteiros`));
+
+    //PROCESSAMENTO
+    
+    while (isNaN(senhaC) || senhaC < 1000 || senhaC > 9999) {
+        alert(`Senha inválida, a senha deve ter 4 números inteiros`) ;
+        senhaC = Number(prompt(`Digite uma senha com 4 números inteiros`));
+    }
+
+    let senha = Number(prompt(`Digite sua senha`));
+
+    while (senha !== senhaC) {
+        alert(`Senha incorreta`) ;
+        senha = Number(prompt(`Digite novamente sua senha`));
+    }
+
+    alert(`Senha correta`)
+
+    //SAÍDA
+
+</script>

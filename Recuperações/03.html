@@ -1,0 +1,26 @@
+<meta charset="UTF-8">
+<script>
+    /*
+    Problema: Rendimento de um investimento
+    Peça para o usuário informar o valor de um investimento e a taxa de juros mensal. Também pergunte ao usuário por quanto tempo deseja deixar o seu dinheiro investido. Calcule e apresente o rendimento final do investimento, considerando o valor inicial, a taxa de juros e o tempo que a quantia ficará investida.
+    */
+   
+   //Entrada
+   
+    let invest = Number(prompt(`Qual o valor do investimento?`));
+    const juros = Number(prompt(`Qual o valor da taxa de juros mensal?`));
+    const tempo = Number(prompt(`Quantos meses seu dinheiro será investido?`));
+   
+   //Processamento
+   
+   for(meses = 1; meses <= tempo; meses++)  {
+        invest = invest + (invest * juros/100);
+    }
+   
+   //Saída
+
+   document.write(`A quantia final de dinheiro será de: R$${invest.toFixed(2)}`);
+
+   /*Por exemplo, se o usuário informar que deseja investir R$ 100,00, com uma taxa de juros de 1% ao mês, durante 5 meses, o resultado será R$ 105,10.*/
+
+</script>

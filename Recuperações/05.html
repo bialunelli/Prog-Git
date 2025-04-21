@@ -1,0 +1,76 @@
+<script>
+    /*
+    Problema: Eleição
+    Em uma eleição presidencial existem quatro candidatos. Os votos são informados através de códigos. Os dados utilizados para a contagem dos votos obedecem à seguinte codificação:
+    - 1,2,3,4 = voto para os respectivos candidatos;
+    - 5 = voto nulo;
+    - 6 = voto em branco;
+    Elabore um algoritmo que leia o código do candidado em um voto. Calcule e escreva:
+    - total de votos e a porcentagem para cada candidato;
+    - total de votos nulos e a porcentagem de votos nulos;
+    - total de votos em branco e a porcentagem de votos em branco.
+    Pergunte ao usuário quantos eleitores votarão para poder determinar a quantidade de repetições que o for irá executar.
+    */
+
+    //ENTRADA
+
+    let r1 = prompt(`Qual o nome do candidato 1?`).toUpperCase();
+    let r2 = prompt(`Qual o nome do candidato 2?`).toUpperCase();
+    let r3 = prompt(`Qual o nome do candidato 3?`).toUpperCase();
+    let r4 = prompt(`Qual o nome do candidato 4?`).toUpperCase();
+    let vot = Number(prompt(`Qual a quantidade de eleitores?`));
+
+    //PROCESSAMENTO
+
+    let c1 = 0;
+    let c2 = 0;
+    let c3 = 0;
+    let c4 = 0;
+    let c5 = 0;
+    let c6 = 0;
+
+    for (let eleitor = 1; eleitor <= vot; eleitor++) {
+        let voto = prompt(`Em quem você deseja votar? Digite 1 para ${r1}, 2 para ${r2}, 3 para ${r3}, 4 para ${r4}, 5 para voto nulo e 6 para voto branco`);
+        if (voto == "1") {
+            c1++;
+        }
+        else if (voto == "2") {
+            c2++;
+        }
+        else if (voto == "3") {
+            c3++;
+        }
+        else if (voto == "4") {
+            c4++;
+        }
+        else if (voto == "5") {
+            c5++;
+        } else if (voto == "6") {
+            c6++;
+        }
+        else {
+            alert(`Digite um número válido`);
+        }
+    }
+    let por1 = (c1 / vot) * 100;
+    let por2 = (c2 / vot) * 100;
+    let por3 = (c3 / vot) * 100;
+    let por4 = (c4 / vot) * 100;
+    let por5 = (c5 / vot) * 100;
+    let por6 = (c6 / vot) * 100;
+
+
+    //SAÍDA
+
+    alert(`Resultado da votação:
+    ${r1}: ${c1} voto(s) (${por1.toFixed(2)}%)
+    ${r2}: ${c2} voto(s) (${por2.toFixed(2)}%)
+    ${r3}: ${c3} voto(s) (${por3.toFixed(2)}%)
+    ${r4}: ${c4} voto(s) (${por4.toFixed(2)}%)
+    Nulo: ${c5} voto(s) (${por5.toFixed(2)}%)
+    Branco: ${c6} voto(s) (${por6.toFixed(2)}%)`);
+
+    /*
+    Desafio :)
+    */
+</script>
